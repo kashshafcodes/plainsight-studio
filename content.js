@@ -4,7 +4,7 @@
    ============================================================ */
 
 window.SITE = {
-  studioName: "AtoshKach Studio",
+  studioName: "Plainsight Studio",
   founderName: "Kazi Marzuk",
   location: "Dhaka, Bangladesh",
 
@@ -14,7 +14,7 @@ window.SITE = {
   linkedin: "",                        // full URL. "" hides it.
   youtube: "",
   facebook: "",
-  instagram: "https://www.instagram.com/atosh.kach/",
+  instagram: "https://www.instagram.com/atosh.kach/",   // the founder's editorial channel আতসকাচ (shown as a portfolio credit)
 
   // Proof strip under the hero. Production facts, not view counts.
   // Update as the channel grows; delete a line to hide it.

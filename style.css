@@ -4,7 +4,7 @@
 @font-face { font-family: "Hind Siliguri"; src: url(fonts/HindSiliguri-Bold.ttf) format("truetype"); font-weight: 700; font-display: swap; }
 @font-face { font-family: "Anton"; src: url(fonts/Anton-Regular.ttf) format("truetype"); font-weight: 400; font-display: swap; }
 
-/* আতসকাচ tokens (brand/BRAND.md): paper theme = light, night theme = dark */
+/* Plainsight tokens: shares the founder's paper palette, with its own blue accent and eye mark */
 :root {
   --bg: #ece6d8;          /* canvas */
   --bg-alt: #e4ddcc;
@@ -14,7 +14,7 @@
   --line: #ddd5c4;        /* grid-line */
   --panel: #15141f;
   --on-panel: #f2efe8;
-  --accent: #6b4fd8;      /* series-ai, the logo's lens colour */
+  --accent: #2563c9;
   --accent-ink: #ffffff;
   --accent-soft: #ffe2a0; /* lens-light */
   --highlight: #f4c542;
@@ -37,9 +37,9 @@
     --muted: #9aa4b2;
     --line: #1c2430;
     --panel: #1b1f2a;
-    --accent: #9b82ff;
+    --accent: #5aa2ff;
     --accent-ink: #0e1116;
-    --accent-soft: #2a2440;
+    --accent-soft: #1a2a40;
     --s-ai: #9b82ff; --s-cyber: #2ec27e; --s-tech: #4d9bff; --s-money: #f0a830;
     color-scheme: dark;
   }
@@ -112,11 +112,15 @@ p { margin: 0 0 1em; }
 }
 .nav.is-scrolled { border-bottom-color: var(--line); }
 .nav__inner { display: flex; align-items: center; justify-content: space-between; height: 72px; }
-.logo { display: flex; align-items: center; gap: .2rem; text-decoration: none; }
-.logo img { height: 76px; width: auto; margin: 0 -12px 0 -16px; }
+.logo { display: flex; align-items: center; gap: .55rem; text-decoration: none; }
+.logo__mark { width: 34px; height: 34px; }
+.logo__bg { fill: var(--ink); }
+.logo__eye { fill: none; stroke: var(--bg); stroke-width: 5; stroke-linejoin: round; }
+.logo__pupil { fill: var(--highlight); }
+.logo__name { font: 700 1.35rem/1 var(--font-display); letter-spacing: -0.02em; padding-top: 3px; }
 .logo__studio {
   font: 400 .75rem/1 var(--font-tag); letter-spacing: .14em; text-transform: uppercase;
-  color: var(--muted); padding: 4px 0 0 .7rem; border-left: 1px solid var(--line); margin-left: .4rem;
+  color: var(--muted); padding: 4px 0 0 .6rem; border-left: 1px solid var(--line);
 }
 .nav__links { display: flex; align-items: center; gap: 1.8rem; }
 .nav__links a:not(.btn) { text-decoration: none; font-weight: 500; font-size: .95rem; color: var(--muted); }
@@ -140,7 +144,7 @@ p { margin: 0 0 1em; }
   .nav__links.is-open { display: flex; }
   .nav__links a:not(.btn) { padding: 14px 4px; border-bottom: 1px solid var(--line); font-size: 1.05rem; color: var(--ink); }
   .nav__links .btn { margin-top: 16px; }
-  .logo img { height: 54px; }
+  .logo__mark { width: 30px; height: 30px; }
 }
 
 /* Hero */
